@@ -30,6 +30,7 @@ const socialIcons = [
 ];
 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <footer className="footer">
 
