@@ -1,0 +1,228 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  padding: 0;
+}
+
+.navbar:not(.scrolled) {
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: #0d1b2e;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #0688de;
+}
+
+/* ── LOGO IMAGE ── */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbar-logo-img {
+  height: 52px;          /* adjust to taste — keeps aspect ratio */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-left: 30px;
+}
+
+/* ── NAV LINKS ── */
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 2px;
+}
+
+.navbar-links a,
+.navbar-link {
+  display: block;
+  padding: 7px 14px;
+  font-size: 0.97rem;    /* increased from 0.85rem */
+  font-weight: 600;      /* slightly bolder for readability */
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: 6px;
+  transition: all 0.2s;
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active,
+.navbar-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+/* ── TOPBAR CONTACT ── */
+
+.navbar-topbar {
+  display: flex;
+  gap: 20px;
+  margin-left: 100px;
+}
+
+.topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.topbar-item:hover {
+  color: #ffffff;
+}
+
+/* ── CTA BUTTON ── */
+
+.navbar-cta {
+  flex-shrink: 0;
+  padding: 9px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: #ffffff;
+  color: #1e3a8a;
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.navbar-cta:hover {
+  background: #e8f0fe;
+  color: #1e3a8a;
+  transform: none;
+}
+
+/* ── HAMBURGER ── */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── MOBILE MENU ── */
+
+.mobile-menu {
+  background: #0d1b2e;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.mobile-menu.open {
+  max-height: 520px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 12px 24px;
+}
+
+.mobile-menu ul li a {
+  display: block;
+  padding: 13px 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;           /* increased from original */
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-menu ul li a:hover {
+  color: #ffffff;
+}
+
+.mobile-menu .btn {
+  display: block;
+  margin: 16px 24px 20px;
+  text-align: center;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 960px) {
+  .navbar-topbar { display: none; }
+  .navbar-links  { display: none; }
+  .navbar-cta    { display: none; }
+  .hamburger     { display: flex; }
+}
+
+@media (min-width: 961px) {
+  .mobile-menu { display: none !important; }
+}
+
+/* ── GLOBAL BTN ── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 7px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #1e3a8a;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #e8f0fe;
+  color: #1e3a8a;
+}

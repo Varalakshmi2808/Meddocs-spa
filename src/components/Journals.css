@@ -1,0 +1,212 @@
+/* SECTION */
+.journals-section {
+  padding: 10px 50px;
+  background: #f8fafc;
+  position: relative;
+}
+
+/* BACKGROUND */
+.journals-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, #eef2ff, transparent);
+}
+
+/* HEADER */
+.journals-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.journals-desc {
+  max-width: 420px;
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* GRID */
+.journals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* CARD */
+.journal-card {
+  background: var(--accent);          /* FIX: was #0688de — now uses per-journal color */
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* FIX: was #e2e8f0 — invisible on colored bg */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* HOVER */
+.journal-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 255, 255, 0.35); /* FIX: was var(--accent) — meaningless on same-color bg */
+}
+
+/* TOP */
+.jc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* ICON BOX */
+.jc-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.18); /* FIX: was var(--accent-bg) — undefined/invisible */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG ICON */
+.jc-svg {
+  width: 20px;
+  height: 20px;
+  stroke: #ffffff;                    /* FIX: was var(--accent) — same as bg, invisible */
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ISSN */
+.jc-issn {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.85);  /* FIX: was #64748b — dark on dark */
+  background: rgba(255, 255, 255, 0.15); /* FIX: was #f1f5f9 — clashed with colored bg */
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* TITLE */
+.jc-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #ffffff;                     /* FIX: was #0f172a — dark on dark */
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* DESC */
+.jc-desc {
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.82);  /* FIX: was #64748b — dark on dark */
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* FOOTER */
+.jc-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ARTICLES */
+.jc-articles-num {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;                     /* FIX: was var(--accent) — same as bg, invisible */
+}
+
+.jc-articles-lbl {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);   /* FIX: was #94a3b8 — dark on dark */
+}
+
+/* LINK */
+.jc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ffffff;                     /* FIX: was var(--accent) — same as bg, invisible */
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.15); /* FIX: added pill bg for legibility */
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+.jc-link:hover {
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.28); /* FIX: was missing — now has hover state */
+}
+
+/* ARROW */
+.jc-arrow {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ACCENT LINE */
+.jc-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: rgba(255, 255, 255, 0.45); /* FIX: was var(--accent) — same as bg, invisible */
+  transition: width 0.3s ease;
+}
+
+.journal-card:hover .jc-bar {
+  width: 100%;
+}
+
+/* CTA */
+.journals-cta {
+  text-align: center;
+  margin-top: 45px;
+}
+
+/* BUTTON */
+.btn-outline {
+  border: 2px solid #1e3a8a;
+  color: #1e3a8a;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #1e3a8a;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .journals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journals-header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .journals-grid {
+    grid-template-columns: 1fr;
+  }
+}
