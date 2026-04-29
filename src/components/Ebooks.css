@@ -1,4 +1,4 @@
-
+/* ================= SECTION ================= */
 .ebooks-section {
   padding: 40px 50px;
   background: var(--navy-mid);
@@ -15,7 +15,7 @@
     radial-gradient(ellipse at 80% 20%, rgba(200,150,62,0.06) 0%, transparent 50%);
 }
 
-/* Header */
+/* ================= HEADER ================= */
 .ebooks-header {
   display: flex;
   align-items: flex-end;
@@ -25,7 +25,7 @@
   z-index: 1;
 }
 
-/* Grid */
+/* ================= GRID ================= */
 .ebooks-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -34,7 +34,7 @@
   z-index: 1;
 }
 
-/* Card */
+/* ================= CARD ================= */
 .ebook-card {
   display: flex;
   flex-direction: column;
@@ -52,12 +52,36 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Content */
+/* ================= IMAGE ================= */
+.ebook-image-wrapper {
+  width: 100%;
+  height: 180px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.ebook-img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: contain; /* ✅ full image visible */
+}
+
+/* ================= SPINE ================= */
+.book-spine {
+  width: 100%;
+  height: 5px;
+}
+
+/* ================= CONTENT ================= */
 .book-cover {
   padding: 20px 18px 14px;
   flex: 1;
 }
 
+/* Icon */
 .book-icon-box {
   width: 42px;
   height: 42px;
@@ -76,6 +100,7 @@
   stroke-width: 2;
 }
 
+/* Category */
 .book-category {
   font-size: 0.65rem;
   font-weight: 700;
@@ -86,6 +111,7 @@
   margin-bottom: 10px;
 }
 
+/* Title */
 .book-title {
   font-size: 0.95rem;
   font-weight: 700;
@@ -94,6 +120,7 @@
   margin-bottom: 8px;
 }
 
+/* Year */
 .book-year {
   font-size: 0.7rem;
   color: #64748b;
@@ -106,7 +133,7 @@
   margin: 0 18px 14px;
 }
 
-/* Button */
+/* ================= BUTTON ================= */
 .book-action {
   padding: 0 18px 18px;
 }
@@ -131,69 +158,53 @@
   color: #ffffff;
 }
 
-/* ========================= */
-/* 📱 Mobile (<= 480px) */
-/* ========================= */
+/* ================= MOBILE ================= */
 @media (max-width: 480px) {
+  .ebooks-section {
+    padding: 10px 40px;
+  }
 
   .ebooks-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
-  .book-title {
-    font-size: 0.85rem;
-  }
-
-  .btn-book {
-    font-size: 0.75rem;
-    padding: 8px;
-  }
   .ebooks-header {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
   }
+
+  .ebook-image-wrapper {
+    height: 160px;
+  }
 }
 
-/* ========================= */
-/* 📲 Small Tablets (481px - 768px) */
-/* ========================= */
+/* ================= SMALL TABLETS ================= */
 @media (min-width: 481px) and (max-width: 768px) {
   .ebooks-section {
-    padding: 40px 24px;
+    padding: 10px 40px;
   }
 
   .ebooks-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
   }
 
   .ebooks-header {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
   }
 }
 
-/* ========================= */
-/* 💻 Tablets / Small Laptops (769px - 1024px) */
-/* ========================= */
+/* ================= TABLETS ================= */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .ebooks-section {
-    padding: 50px 40px;
-  }
-
   .ebooks-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* ========================= */
-/* 🖥 Large Screens (>1024px) */
-/* ========================= */
+/* ================= DESKTOP ================= */
 @media (min-width: 1025px) {
   .ebooks-grid {
     grid-template-columns: repeat(4, 1fr);

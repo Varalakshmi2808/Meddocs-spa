@@ -176,14 +176,70 @@ export const allJournals = [
 ];
 
 export const ebooks = [
-  { id: 1, title: "Alzheimer's Disease & Treatment", category: "Neurology", year: 2023, color: "#1e3a8a" },
-  { id: 2, title: "Pharmaceutical Chemistry Essentials", category: "Pharmacology", year: 2023, color: "#1e3a8a" },
-  { id: 3, title: "Vascular Diseases: A Clinical Guide", category: "Cardiology", year: 2022, color: "#1e3a8a" },
-  { id: 4, title: "Importance & Applications of Nanotechnology", category: "Nanomedicine", year: 2023, color: "#1e3a8a" },
-  { id: 5, title: "Principles of Modern Chemistry", category: "Chemistry", year: 2022, color: "#1e3a8a" },
-  { id: 6, title: "Recent Trends in Biotechnology", category: "Biotechnology", year: 2023, color: "#1e3a8a" },
-  { id: 7, title: "Research Trends of Microbiology", category: "Microbiology", year: 2022, color: "#1e3a8a" },
-  { id: 8, title: "Transfusion Medicine Handbook", category: "Hematology", year: 2023, color: "#1e3a8a" },
+  {
+    id: 1,
+    title: "Alzheimer's Disease & Treatment",
+    category: "Neurology",
+    year: 2023,
+    color: "#1e3a8a",
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
+  },
+  {
+    id: 2,
+    title: "Pharmaceutical Chemistry Essentials",
+    category: "Pharmacology",
+    year: 2023,
+    color: "#1e3a8a",
+    image: "https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id: 3,
+    title: "Vascular Diseases: A Clinical Guide",
+    category: "Cardiology",
+    year: 2022,
+    color: "#1e3a8a",
+    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd"
+  },
+  {
+    id: 4,
+    title: "Importance & Applications of Nanotechnology",
+    category: "Nanomedicine",
+    year: 2023,
+    color: "#1e3a8a",
+    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69"
+  },
+  {
+    id: 5,
+    title: "Principles of Modern Chemistry",
+    category: "Chemistry",
+    year: 2022,
+    color: "#1e3a8a",
+    image: "https://images.unsplash.com/photo-1532634993-15f421e42ec0"
+  },
+  {
+    id: 6,
+    title: "Recent Trends in Biotechnology",
+    category: "Biotechnology",
+    year: 2023,
+    color: "#1e3a8a",
+    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557"
+  },
+  {
+    id: 7,
+    title: "Research Trends of Microbiology",
+    category: "Microbiology",
+    year: 2022,
+    color: "#1e3a8a",
+    image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    id: 8,
+    title: "Transfusion Medicine Handbook",
+    category: "Hematology",
+    year: 2023,
+    color: "#1e3a8a",
+    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b"
+  }
 ];
 
 export const conferences = [
