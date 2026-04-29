@@ -16,12 +16,10 @@ export default function Ebooks() {
       <div className="ebooks-bg" />
 
       <div className="container">
-        <div className="ebooks-header">
-          <div>
             <div className="section-label">Free to Download</div>
+        <div className="ebooks-header">
             <h2 className="section-heading" style={{ color: '#0688de' }}>Medical eBooks</h2>
-          </div>
-          <a href="#contact" className="btn btn-gold">View All eBooks</a>
+          <a href="#contact" className="btn btn-gold">View All eBooks</a> 
         </div>
 
         <div className="ebooks-grid">
